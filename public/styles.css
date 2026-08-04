@@ -1,0 +1,330 @@
+:root {
+  --primary-color: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --bg-color: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --border-color: #dee2e6;
+  --success-color: #198754;
+  --warning-color: #dc3545;
+  --badge-bg: #e7f1ff;
+  --badge-text: #0c63e4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  padding: 20px 10px;
+}
+
+/* Encabezado Principal */
+.main-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.main-header h1 {
+  font-size: 1.8rem;
+  color: #1b2a4a;
+}
+
+.main-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Contenedor Principal */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tarjetas */
+.card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  color: #1b2a4a;
+  margin-bottom: 15px;
+}
+
+.card-header-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Componente Teórico (Grid de Exámenes) */
+.theory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Encabezados de Columnas para Sesiones */
+.session-header-labels {
+  display: grid;
+  grid-template-columns: 80px repeat(4, 1fr);
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  padding: 0 12px 6px 12px;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.session-header-labels span:first-child {
+  text-align: left;
+}
+
+/* Filas de Sesiones (1 a 14) */
+.session-row {
+  display: grid;
+  grid-template-columns: 80px repeat(4, 1fr);
+  gap: 8px;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.session-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-group-sub {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-sub label {
+  display: none; /* Se oculta para usar las etiquetas del encabezado */
+}
+
+/* Inputs de Texto/Número */
+input[type="number"] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+/* Acciones y Botón */
+.actions {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Resumen de Resultados */
+.results-card {
+  border-top: 4px solid var(--primary-color);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.result-box {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.result-box h3 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.status {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 20px 0;
+}
+
+.final-score-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.final-score {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.status-badge {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 4px;
+}
+
+/* Responsive para Celulares */
+@media (max-width: 600px) {
+  .session-header-labels {
+    display: none; /* En pantallas muy pequeñas se ocultan los encabezados generales */
+  }
+
+  .session-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .session-label {
+    grid-column: span 2;
+    border-bottom: 1px dashed #ced4da;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+  }
+
+  .form-group-sub label {
+    display: block; /* Muestra las etiquetas individuales en celulares */
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+}
+
+/* Pie de Página */
+.main-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.main-footer strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Texto vertical flotante pegado a las tarjetas */
+.side-text-vertical {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 800;
+  font-size: 1.6rem; /* Texto más grande y visible */
+  color: var(--primary-color, #1a237e);
+  writing-mode: vertical-rl;
+  letter-spacing: 2px;
+  user-select: none;
+  z-index: 100;
+  opacity: 0.85;
+}
+
+/* Posición pegada al lado izquierdo de la tabla */
+.side-left {
+  left: 120px; /* Aumenta o disminuye este valor si quieres acercarlo más o alejarlo */
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Posición pegada al lado derecho de la tabla */
+.side-right {
+  right: 120px; /* Aumenta o disminuye este valor si quieres acercarlo más o alejarlo */
+}
+
+/* Ocultar en pantallas medianas o celulares para evitar superposición */
+@media (max-width: 1200px) {
+  .side-text-vertical {
+    display: none;
+  }
+}

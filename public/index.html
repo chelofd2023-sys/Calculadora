@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Promedios - Bioquímica USMP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>Calculadora de Bioquímica</h1>
+    <p>Facultad de Medicina Humana - USMP</p>
+  </header>
+
+  <main class="container">
+    
+    <!-- Textos flotantes laterales -->
+    <div class="side-text-vertical side-left">Вас взломал Чело</div>
+    <div class="side-text-vertical side-right">Вас взломал Чело</div>
+
+    <form id="grade-form">
+
+      <!-- SECCIÓN: EXÁMENES TEÓRICOS -->
+      <section class="card">
+        <h2>Componente Teórico (50%)</h2>
+        <div class="theory-grid">
+          <div class="form-group">
+            <label for="examenParcial">Examen Parcial Teórico (50%):</label>
+            <input type="number" id="examenParcial" class="auto-save nav-input" min="0" max="20" step="0.1" placeholder="0 - 20">
+          </div>
+          <div class="form-group">
+            <label for="examenFinal">Examen Final Teórico (50%):</label>
+            <input type="number" id="examenFinal" class="auto-save nav-input" min="0" max="20" step="0.1" placeholder="0 - 20">
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: SEMINARIOS -->
+      <section class="card">
+        <div class="card-header-inline">
+          <h2>Seminarios (30% Total)</h2>
+          <span class="badge">Promedio: <strong id="inline-prom-seminario">0.00</strong></span>
+        </div>
+        <div class="session-header-labels">
+          <span>Sesión</span>
+          <span>Cognitivo</span>
+          <span>Práctica</span>
+          <span>Informe</span>
+          <span>Actitudinal</span>
+        </div>
+        <!-- Filas generadas dinámicamente con JS (Sesiones 1 a 14) -->
+        <div id="seminarios-container" class="sessions-list"></div>
+      </section>
+
+      <!-- SECCIÓN: PRÁCTICAS / LABORATORIO -->
+      <section class="card">
+        <div class="card-header-inline">
+          <h2>Prácticas de Laboratorio (20% Total)</h2>
+          <span class="badge">Promedio: <strong id="inline-prom-laboratorio">0.00</strong></span>
+        </div>
+        <div class="session-header-labels">
+          <span>Sesión</span>
+          <span>Cognitivo</span>
+          <span>Práctica</span>
+          <span>Informe</span>
+          <span>Actitudinal</span>
+        </div>
+        <!-- Filas generadas dinámicamente con JS (Sesiones 1 a 14) -->
+        <div id="practicas-container" class="sessions-list"></div>
+      </section>
+
+      <!-- BOTÓN DE CÁLCULO GENERAL -->
+      <div class="actions">
+        <button type="submit" id="btn-calcular" class="btn-primary">Calcular Promedio Final</button>
+      </div>
+
+    </form>
+
+    <!-- SECCIÓN: RESULTADOS Y ESTADO -->
+    <section class="card results-card" id="resultados-section">
+      <h2>Resumen de Calificaciones</h2>
+
+      <div class="results-grid">
+        <div class="result-box">
+          <h3>Teoría (50%)</h3>
+          <p class="score" id="res-teoria">0.00</p>
+          <span class="status" id="status-teoria">Faltan: 11.00 pts</span>
+        </div>
+
+        <div class="result-box">
+          <h3>Seminarios (25%)</h3>
+          <p class="score" id="res-seminario">0.00</p>
+          <span class="status" id="status-seminario">Faltan: 11.00 pts</span>
+        </div>
+
+        <div class="result-box">
+          <h3>Laboratorio (25%)</h3>
+          <p class="score" id="res-laboratorio">0.00</p>
+          <span class="status" id="status-laboratorio">Faltan: 11.00 pts</span>
+        </div>
+
+        <div class="result-box">
+          <h3>Componente Práctico Total</h3>
+          <p class="score" id="res-practico">0.00</p>
+          <small>(60% Seminario + 40% Práctica)</small>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="final-score-box">
+        <div>
+          <h3>Nota Final Actual</h3>
+          <p class="final-score" id="res-final">0.00</p>
+        </div>
+        <div>
+          <h3>Estado del Curso</h3>
+          <p class="status-badge" id="res-estado">REQUIERE MÁS NOTA</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>Created by <strong>Chelo</strong></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

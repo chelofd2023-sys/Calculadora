@@ -98,8 +98,9 @@ body {
   margin-bottom: 6px;
 }
 
-/* Encabezados de Columnas para Sesiones */
-.session-header-labels {
+/* Cabecera y filas generales (Laboratorio: 5 columnas) */
+.session-header-labels,
+.session-row {
   display: grid;
   grid-template-columns: 80px repeat(4, 1fr);
   gap: 8px;
@@ -113,8 +114,15 @@ body {
   text-align: center;
 }
 
-.session-header-labels span:first-child {
+.session-header-labels span:first-child,
+.session-row span:first-child {
   text-align: left;
+}
+
+/* Regla específica para Seminario (4 columnas: Sesión + 3 notas) */
+.session-header-seminario,
+#seminarios-container .session-row {
+  grid-template-columns: 80px repeat(3, 1fr);
 }
 
 /* Filas de Sesiones (1 a 14) */

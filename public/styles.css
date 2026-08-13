@@ -25,7 +25,6 @@ body {
   padding: 20px 10px;
 }
 
-/* Encabezado Principal */
 .main-header {
   text-align: center;
   margin-bottom: 25px;
@@ -41,13 +40,11 @@ body {
   font-size: 0.95rem;
 }
 
-/* Contenedor Principal */
 .container {
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Tarjetas */
 .card {
   background: var(--card-bg);
   border-radius: 10px;
@@ -80,7 +77,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Componente Teórico (Grid de Exámenes) */
 .theory-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -98,7 +94,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* Cabecera y filas generales (Laboratorio: 5 columnas) */
 .session-header-labels,
 .session-row {
   display: grid;
@@ -119,13 +114,11 @@ body {
   text-align: left;
 }
 
-/* Regla específica para Seminario (4 columnas: Sesión + 3 notas) */
 .session-header-seminario,
 #seminarios-container .session-row {
   grid-template-columns: 80px repeat(3, 1fr);
 }
 
-/* Filas de Sesiones (1 a 14) */
 .session-row {
   display: grid;
   grid-template-columns: 80px repeat(4, 1fr);
@@ -150,10 +143,9 @@ body {
 }
 
 .form-group-sub label {
-  display: none; /* Se oculta para usar las etiquetas del encabezado */
+  display: none; 
 }
 
-/* Inputs de Texto/Número */
 input[type="number"] {
   width: 100%;
   padding: 6px 8px;
@@ -170,7 +162,6 @@ input[type="number"]:focus {
   box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
 }
 
-/* Acciones y Botón */
 .actions {
   text-align: center;
   margin: 20px 0;
@@ -194,7 +185,6 @@ input[type="number"]:focus {
   background-color: var(--primary-hover);
 }
 
-/* Resumen de Resultados */
 .results-card {
   border-top: 4px solid var(--primary-color);
 }
@@ -262,10 +252,9 @@ input[type="number"]:focus {
   border-radius: 4px;
 }
 
-/* Responsive para Celulares */
 @media (max-width: 600px) {
   .session-header-labels {
-    display: none; /* En pantallas muy pequeñas se ocultan los encabezados generales */
+    display: none; 
   }
 
   .session-row {
@@ -282,14 +271,13 @@ input[type="number"]:focus {
   }
 
   .form-group-sub label {
-    display: block; /* Muestra las etiquetas individuales en celulares */
+    display: block; 
     font-size: 0.75rem;
     color: var(--text-muted);
     margin-bottom: 2px;
   }
 }
 
-/* Pie de Página */
 .main-footer {
   text-align: center;
   margin-top: 40px;
@@ -304,13 +292,12 @@ input[type="number"]:focus {
   font-weight: 700;
 }
 
-/* Texto vertical flotante pegado a las tarjetas */
 .side-text-vertical {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
   font-weight: 800;
-  font-size: 1.6rem; /* Texto más grande y visible */
+  font-size: 1.6rem; 
   color: var(--primary-color, #1a237e);
   writing-mode: vertical-rl;
   letter-spacing: 2px;
@@ -319,18 +306,15 @@ input[type="number"]:focus {
   opacity: 0.85;
 }
 
-/* Posición pegada al lado izquierdo de la tabla */
 .side-left {
-  left: 120px; /* Aumenta o disminuye este valor si quieres acercarlo más o alejarlo */
+  left: 120px; 
   transform: translateY(-50%) rotate(180deg);
 }
 
-/* Posición pegada al lado derecho de la tabla */
 .side-right {
-  right: 120px; /* Aumenta o disminuye este valor si quieres acercarlo más o alejarlo */
+  right: 120px; 
 }
 
-/* Ocultar en pantallas medianas o celulares para evitar superposición */
 @media (max-width: 1200px) {
   .side-text-vertical {
     display: none;

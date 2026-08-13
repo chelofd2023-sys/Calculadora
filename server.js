@@ -86,7 +86,7 @@ const promPracticoNum = (promSeminarioNum * 0.60) + (promLaboratorioNum * 0.40);
   }
 });
 
-// Iniciar servidor
+
 app.listen(PORT, () => {
   console.log(`Servidor de Bioquímica corriendo en http://localhost:${PORT}`);
 });

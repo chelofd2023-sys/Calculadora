@@ -15,13 +15,11 @@
 
   <main class="container">
     
-    <!-- Textos flotantes laterales -->
     <div class="side-text-vertical side-left">Вас взломал Чело</div>
     <div class="side-text-vertical side-right">Вас взломал Чело</div>
 
     <form id="grade-form">
 
-      <!-- SECCIÓN: EXÁMENES TEÓRICOS -->
       <section class="card">
         <h2>Componente Teórico (50%)</h2>
         <div class="theory-grid">
@@ -36,7 +34,6 @@
         </div>
       </section>
 
-      <!-- SECCIÓN: SEMINARIOS -->
       <section class="card">
         <div class="card-header-inline">
           <h2>Seminarios (30% Total)</h2>
@@ -48,11 +45,9 @@
           <span>Práctica</span>
           <span>Actitudinal</span>
         </div>
-        <!-- Filas generadas dinámicamente con JS (Sesiones 1 a 14) -->
         <div id="seminarios-container" class="sessions-list"></div>
       </section>
 
-      <!-- SECCIÓN: PRÁCTICAS / LABORATORIO -->
       <section class="card">
         <div class="card-header-inline">
           <h2>Prácticas de Laboratorio (20% Total)</h2>
@@ -65,18 +60,15 @@
           <span>Informe</span>
           <span>Actitudinal</span>
         </div>
-        <!-- Filas generadas dinámicamente con JS (Sesiones 1 a 14) -->
         <div id="practicas-container" class="sessions-list"></div>
       </section>
 
-      <!-- BOTÓN DE CÁLCULO GENERAL -->
       <div class="actions">
         <button type="submit" id="btn-calcular" class="btn-primary">Calcular Promedio Final</button>
       </div>
 
     </form>
 
-    <!-- SECCIÓN: RESULTADOS Y ESTADO -->
     <section class="card results-card" id="resultados-section">
       <h2>Resumen de Calificaciones</h2>
 

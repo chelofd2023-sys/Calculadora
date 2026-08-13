@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const gradeForm = document.getElementById('grade-form');
   const TOTAL_SESIONES = 14;
 
-  // 1. Generar dinámicamente las 14 filas con 4 casillas por sesión
   const crearFilaSesion = (prefijo, i) => {
     const row = document.createElement('div');
     row.className = 'session-row';
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 2. Extraer notas validadas (entre 0 y 20) de la interfaz
   const obtenerSesiones = (prefijo) => {
     const sesiones = [];
     for (let i = 1; i <= TOTAL_SESIONES; i++) {
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return sesiones;
   };
 
-  // 3. Cálculo de Promedio Local (Pasito 50%, Práctica 20%, Informe 20%, Actitudinal 10%)
   const calcularPromedioLocal = (sesiones) => {
     let suma = 0;
     let contadas = 0;
@@ -94,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (elemPrac) elemPrac.textContent = promPrac;
   };
 
-  // 4. Navegación fluida presionando la tecla ENTER
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && e.target.tagName === 'INPUT') {
       e.preventDefault();
@@ -111,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 5. Persistencia de datos en LocalStorage
   const guardarNotasEnStorage = () => {
     const dataGuardar = {};
     document.querySelectorAll('.auto-save').forEach(input => {
@@ -140,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cargarNotasDeStorage();
 
-  // 6. Envío al servidor Express al procesar el formulario
   gradeForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -163,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = await response.json();
 
-      // Renderizar valores retornados por el servidor
       document.getElementById('inline-prom-seminario').textContent = data.promedioSeminario;
       document.getElementById('inline-prom-laboratorio').textContent = data.promedioLaboratorio;
 
